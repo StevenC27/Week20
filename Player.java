@@ -35,4 +35,8 @@ public class Player {
         }
         return count;
     }
+
+    public String getPlayerName(){
+        return name;
+    }
 }

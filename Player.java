@@ -17,4 +17,12 @@ public class Player {
             }
         }
     }
+
+    public void removeCard(Card card){
+        for(int i = 0; i < cards.length; i++){
+            if(cards[i] == card){
+                cards[i] = null;
+            }
+        }
+    }
 }

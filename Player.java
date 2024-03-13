@@ -42,6 +42,14 @@ public class Player {
         return name;
     }
 
+    public void nextCard(){
+        for(int i = 0; i < cards.length; i++){
+            if(i == cards.length-1 && currentCard == cards[i]){
+                currentCard = cards[0];
+            }else currentCard = cards[i+1];
+        }
+    }
+
     public Card getCurrentCard(){
         return currentCard;
     }

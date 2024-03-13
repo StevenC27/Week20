@@ -53,4 +53,8 @@ public class Player {
     public Card getCurrentCard(){
         return currentCard;
     }
+
+    public boolean hasWon(){
+        return this.getCardCount() == cards.length;
+    }
 }

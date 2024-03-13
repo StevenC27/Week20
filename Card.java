@@ -12,5 +12,7 @@ public class Card {
         categories[4] = new Category("Wings", wings);
     }
 
-
+    public String getName(){
+        return name;
+    }
 }

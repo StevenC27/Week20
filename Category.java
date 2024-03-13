@@ -8,10 +8,10 @@ public class Category {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public int getValue(){
-        return this.value;
+        return value;
     }
 }

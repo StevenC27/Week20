@@ -22,4 +22,8 @@ public class Card {
         }
         return null;
     }
+
+    public boolean isBetterThan(Card card, String name){
+        return this.getCategory(name).getValue() > card.getCategory(name).getValue();
+    }
 }

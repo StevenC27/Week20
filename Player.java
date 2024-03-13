@@ -25,4 +25,14 @@ public class Player {
             }
         }
     }
+
+    public int getCardCount(){
+        int count = 0;
+        for(Card c:cards){
+            if(c != null){
+                count++;
+            }
+        }
+        return count;
+    }
 }

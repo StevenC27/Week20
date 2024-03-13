@@ -16,6 +16,7 @@ public class Player {
         for(int i = 0; i < cards.length; i++){
             if(cards[i] == null){
                 cards[i] = card;
+                break;
             }
         }
     }
@@ -55,6 +56,6 @@ public class Player {
     }
 
     public boolean hasWon(){
-        return this.getCardCount() == cards.length;
+        return getCardCount() == cards.length;
     }
 }

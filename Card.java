@@ -15,4 +15,12 @@ public class Card {
     public String getName(){
         return name;
     }
+
+    public Category getCategory(String name){
+        for(Category c:categories){
+            if(c.getName() == name){
+                return c;
+            }
+        }
+    }
 }

@@ -18,9 +18,8 @@ public class Card {
 
     public Category getCategory(String name){
         for(Category c:categories){
-            if(c.getName() == name){
-                return c;
-            }
+            if(c.getName() == name) return c;
         }
+        return null;
     }
 }

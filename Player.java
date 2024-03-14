@@ -49,6 +49,7 @@ public class Player {
                 return i;
             }
         }
+        return -1;
     }
 
     public void nextCard(){
@@ -56,7 +57,7 @@ public class Player {
         else{
             boolean isCardFound = false;
             while(!isCardFound){
-                int i = cards.getCardIndex(currentCard);
+                int i = cards.get
             }
         }
     }

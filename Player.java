@@ -43,18 +43,20 @@ public class Player {
         return name;
     }
 
+    public int getCardIndex(Card card){
+        for(int i = 0; i < cards.length; i++){
+            if(cards[i] == card){
+                return i;
+            }
+        }
+    }
+
     public void nextCard(){
         if(currentCard == null) currentCard = cards[0];
         else{
-            for(int i = 0; i < cards.length; i++){
-                if(i == cards.length-1 && currentCard == cards[i]){
-                    currentCard = cards[0];
-                    break;
-                }
-                else if(i != cards.length-1 && currentCard == cards[i]){
-                    currentCard = cards[i+1];
-                    break;
-                }
+            boolean isCardFound = false;
+            while(!isCardFound){
+                int i = cards.getCardIndex(currentCard);
             }
         }
     }

@@ -26,6 +26,7 @@ public class Player {
         for(int i = 0; i < cards.length; i++){
             if(cards[i] == card){
                 cards[i] = null;
+                break;
             }
         }
     }

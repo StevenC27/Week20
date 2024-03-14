@@ -8,7 +8,7 @@ public class Player {
     public Player(String name, int totalCards){
         this.name = name;
         this.cards = new Card[totalCards];
-        Arrays.fill(cards, null);
+        //Arrays.fill(cards, null);
         currentCard = cards[0];
     }
 
@@ -44,10 +44,18 @@ public class Player {
     }
 
     public void nextCard(){
-        for(int i = 0; i < cards.length; i++){
-            if(i == cards.length-1 && currentCard == cards[i]){
-                currentCard = cards[0];
-            }else currentCard = cards[i+1];
+        if(currentCard == null) currentCard = cards[0];
+        else{
+            for(int i = 0; i < cards.length; i++){
+                if(i == cards.length-1 && currentCard == cards[i]){
+                    currentCard = cards[0];
+                    break;
+                }
+                else if(i != cards.length-1 && currentCard == cards[i]){
+                    currentCard = cards[i+1];
+                    break;
+                }
+            }
         }
     }
 

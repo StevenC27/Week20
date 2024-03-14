@@ -4,12 +4,13 @@ public class Player {
     private String name;
     private Card[] cards;
     private Card currentCard;
+    private int currentCardIndex;
 
     public Player(String name, int totalCards){
         this.name = name;
         this.cards = new Card[totalCards];
-        //Arrays.fill(cards, null);
-        currentCard = cards[0];
+        currentCardIndex = 0;
+        currentCard = cards[currentCardIndex];
     }
 
     public void addCard(Card card){
@@ -43,21 +44,18 @@ public class Player {
         return name;
     }
 
-    public int getCardIndex(Card card){
-        for(int i = 0; i < cards.length; i++){
-            if(cards[i] == card){
-                return i;
-            }
-        }
-        return -1;
-    }
-
     public void nextCard(){
         if(currentCard == null) currentCard = cards[0];
         else{
-            boolean isCardFound = false;
-            while(!isCardFound){
-                int i = cards.get
+            for(int i = currentCardIndex+1; i < cards.length + i; i++){
+                if(cards[i] != null){
+                    currentCardIndex = i;
+                    currentCard = cards[currentCardIndex];
+                    break;
+                }
+                if(i == cards.length-1){
+                    i = -1;
+                }
             }
         }
     }
